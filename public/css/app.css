@@ -1,0 +1,179 @@
+/* lato-regular - latin */
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/lato-v14-latin-regular.eot?6a6d715087a68ac5ad790b4f7bbb1766);
+  /* IE9 Compat Modes */
+  src: local("Lato Regular"), local("Lato-Regular"), url(/fonts/lato-v14-latin-regular.eot?6a6d715087a68ac5ad790b4f7bbb1766) format("embedded-opentype"), url(/fonts/lato-v14-latin-regular.woff2?f1a4a058fbba1e35a406188ae7eddaf8) format("woff2"), url(/fonts/lato-v14-latin-regular.woff?62fb51e9e645f63599238881b9de15dd) format("woff"), url(/fonts/lato-v14-latin-regular.ttf?da4b79be8c588f56351e4d6368fcdbe1) format("truetype"), url(/fonts/lato-v14-latin-regular.svg?9087e4a6aceecc9b2914823044951a3a) format("svg");
+  /* Legacy iOS */
+}
+
+/* lato-300 - latin */
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  src: url(/fonts/lato-v15-latin-300.eot?1b8f8afa9b4ba60fbcf9936eae918ec6);
+  /* IE9 Compat Modes */
+  src: local("Lato Light"), local("Lato-Light"), url(/fonts/lato-v15-latin-300.eot?1b8f8afa9b4ba60fbcf9936eae918ec6) format("embedded-opentype"), url(/fonts/lato-v15-latin-300.woff2?98d8cf792834c0bef59c2be99dc3533d) format("woff2"), url(/fonts/lato-v15-latin-300.woff?656963c4beb814e754e38478fcaa0439) format("woff"), url(/fonts/lato-v15-latin-300.ttf?483a27c988018f92133995b7d1453248) format("truetype"), url(/fonts/lato-v15-latin-300.svg?54d3cfe0cec734925a21cebfe378a12e) format("svg");
+  /* Legacy iOS */
+}
+
+/* lato-300italic - latin */
+
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 300;
+  src: url(/fonts/lato-v15-latin-300italic.eot?f0024105229082db42a2c44171237cae);
+  /* IE9 Compat Modes */
+  src: local("Lato Light Italic"), local("Lato-LightItalic"), url(/fonts/lato-v15-latin-300italic.eot?f0024105229082db42a2c44171237cae) format("embedded-opentype"), url(/fonts/lato-v15-latin-300italic.woff2?a21767e20d27a9c06007c981a8e5f827) format("woff2"), url(/fonts/lato-v15-latin-300italic.woff?8e90b967ea69fc68b130d36cc34d41c0) format("woff"), url(/fonts/lato-v15-latin-300italic.ttf?329d60785944501134891f948f41c001) format("truetype"), url(/fonts/lato-v15-latin-300italic.svg?17e346950dce164549968b7b93d48f2d) format("svg");
+  /* Legacy iOS */
+}
+
+/* lato-italic - latin */
+
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 400;
+  src: url(/fonts/lato-v14-latin-italic.eot?de27b7165f1888b6fdbab53756eeae69);
+  /* IE9 Compat Modes */
+  src: local("Lato Italic"), local("Lato-Italic"), url(/fonts/lato-v14-latin-italic.eot?de27b7165f1888b6fdbab53756eeae69) format("embedded-opentype"), url(/fonts/lato-v14-latin-italic.woff2?b45e52f342dc29c8553f51a99f924871) format("woff2"), url(/fonts/lato-v14-latin-italic.woff?c4082958a18f04bd32a3d3e1f5e390a5) format("woff"), url(/fonts/lato-v14-latin-italic.ttf?2ca893a5bcc79e7d6dd65269b662b99a) format("truetype"), url(/fonts/lato-v14-latin-italic.svg?4f7b172a91b71d1fe950b0b3b7138b10) format("svg");
+  /* Legacy iOS */
+}
+
+/* lato-700 - latin */
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: url(/fonts/lato-v14-latin-700.eot?5bfc01b78afe1d65870344ecce8f071d);
+  /* IE9 Compat Modes */
+  src: local("Lato Bold"), local("Lato-Bold"), url(/fonts/lato-v14-latin-700.eot?5bfc01b78afe1d65870344ecce8f071d) format("embedded-opentype"), url(/fonts/lato-v14-latin-700.woff2?7fbbfd1610770d594aef639cfefdd0b0) format("woff2"), url(/fonts/lato-v14-latin-700.woff?96759e32fdc800c78b527a3e53fe2be6) format("woff"), url(/fonts/lato-v14-latin-700.ttf?f467f2d0c48ef390fc8ca5950cde7f21) format("truetype"), url(/fonts/lato-v14-latin-700.svg?596223f7bff9598c852e949e9d2b1aa0) format("svg");
+  /* Legacy iOS */
+}
+
+/* lato-700italic - latin */
+
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 700;
+  src: url(/fonts/lato-v14-latin-700italic.eot?1b7816f5fbe7d7b2aba44004ced49a96);
+  /* IE9 Compat Modes */
+  src: local("Lato Bold Italic"), local("Lato-BoldItalic"), url(/fonts/lato-v14-latin-700italic.eot?1b7816f5fbe7d7b2aba44004ced49a96) format("embedded-opentype"), url(/fonts/lato-v14-latin-700italic.woff2?c66215e09d2420885ad1a1f3eb2bac37) format("woff2"), url(/fonts/lato-v14-latin-700italic.woff?0a06ba1bdf385495f2679324cfbedd13) format("woff"), url(/fonts/lato-v14-latin-700italic.ttf?2af81ffc0fd312b7fb61c6d29b36b0b9) format("truetype"), url(/fonts/lato-v14-latin-700italic.svg?a1a6510b0398db3f6bd04abd3c2dfcb8) format("svg");
+  /* Legacy iOS */
+}
+
+body {
+  font-family: Lato, sans-serif;
+  font-weight: 300;
+  background-color: #ebebeb;
+  color: #2a2a2a;
+}
+
+body.darkbg {
+  background-color: #2a2a2a;
+  color: #ebebeb;
+}
+
+body.darkbg .linkinput > input[type=text] {
+  color: #ebebeb;
+  text-shadow: #444444 0 0 2px;
+}
+
+.box {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.down {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.linkinput > input[type=text] {
+  text-align: center;
+  width: 100%;
+  background: transparent;
+  font-size: 2em;
+  border: none;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  text-shadow: #dddcdc 0 0 2px;
+}
+
+.linkinput > input[type=text]:focus {
+  outline: none;
+}
+
+.title {
+  width: 15%;
+  margin: auto;
+  font-size: 1.5em;
+  border-bottom: 0.025em solid #747474;
+  margin-bottom: 0.4em;
+  padding-bottom: 0.2em;
+}
+
+footer > .item {
+  cursor: pointer;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+  color: inherit;
+  text-decoration: none;
+}
+
+.add-btn {
+  cursor: pointer;
+  color: #ebebeb;
+  text-decoration: none;
+  background-color: #1d52ff;
+  padding: 0.1em 0.25em;
+  border-radius: 20%;
+  -webkit-transition: background-color 0.1s;
+  transition: background-color 0.1s;
+}
+
+.add-btn:hover {
+  background-color: #1d6cff;
+}
+
+.tooltip.hidden {
+  color: transparent;
+}
+
+.tooltip {
+  color: inherit;
+  -webkit-transition: color 1.5s;
+  transition: color 1.5s;
+}
+

@@ -1,0 +1,13 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="ui container">
+    <div class="ui segment" v-bind:class="{ inverted: dark }">
+        <h1 class="ui center aligned header">
+            <div class="content">
+                {{ config('app.name', 'Laravel') }}
+            </div>
+        </h1>
+    </div>
+</div>
+@endsection

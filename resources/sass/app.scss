@@ -1,0 +1,99 @@
+// Use self-hosted fonts
+@import "font";
+
+body {
+    font-family: Lato, sans-serif;
+    font-weight: 300;
+    background-color: #ebebeb;
+    color: #2a2a2a;
+}
+
+body.darkbg {
+    background-color: #2a2a2a;
+    color: #ebebeb;
+    .linkinput > input[type=text] {
+        color: #ebebeb;
+        text-shadow: #444444 0 0 2px;
+    }
+}
+
+.box {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.down {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.linkinput > input[type=text] {
+    text-align: center;
+    width: 100%;
+    background: transparent;
+    font-size: 2em;
+    border: none;
+    // border-bottom: 0.025em solid #747474;
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    text-shadow: #dddcdc 0 0 2px;
+}
+
+.linkinput > input[type=text]:focus {
+    outline: none;
+}
+
+.title {
+    width: 15%;
+    margin: auto;
+    font-size: 1.5em;
+    border-bottom: 0.025em solid #747474;
+    margin-bottom: 0.4em;
+    padding-bottom: 0.2em;
+}
+
+footer > .item {
+    cursor: pointer;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    color: inherit;
+    text-decoration: none;
+}
+
+.add-btn {
+    cursor: pointer;
+    color: #ebebeb;
+    text-decoration: none;
+    background-color: #1d52ff;
+    padding: 0.1em 0.25em;
+    border-radius: 20%;
+    transition: background-color 0.1s;
+}
+
+.add-btn:hover {
+    background-color: #1d6cff;
+}
+
+.tooltip.hidden {
+    color: transparent;
+}
+
+.tooltip {
+    color: inherit;
+    transition: color 1.5s;
+}
