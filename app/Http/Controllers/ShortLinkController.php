@@ -92,6 +92,9 @@ class ShortLinkController extends Controller
      */
     public function destroy(ShortLink $shortLink, $passwd)
     {
-
+        if (Hash::check($passwd, $shortLink->deletepasswd)) {
+            $shortLink->delete();
+            return redirect('/')->with('deleted', true);
+        }
     }
 }

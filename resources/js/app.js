@@ -23,6 +23,12 @@ Vue.component('dark-button', require('./components/DarkButton.vue').default);
 
 Vue.component('create-link', require('./components/CreateLink.vue').default);
 
+Vue.component('report-link', require('./components/ReportLink.vue').default);
+
+Vue.component('admin-panel', require('./components/AdminPanel.vue').default);
+
+Vue.component('admin-report', require('./components/AdminReport.vue').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -39,9 +45,6 @@ axios.get('/language.json').then(res => {
         el: '#app',
         data: {
             dark: false,
-        },
-        mounted() {
-            $('.linkinput > input').focus();
         },
         methods: {
             switchTheme: function(dark) {

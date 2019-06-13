@@ -13,8 +13,15 @@
 
 Route::get('/', 'ShortLinkController@create');
 Route::post('/link', 'ShortLinkController@store');
+Route::get('/delete/{shortLink}/{passwd}', 'ShortLinkController@destroy');
 
-Route::get('/delete/{shortLink}/{passwd}');
+Route::get('/legal', 'StaticController@legal');
+
+Route::resource('report', 'ReportController')->only(['create', 'store']);
+Route::resource('report', 'ReportController')->only(['index', 'destroy'])->middleware('auth');
+
+Route::get('/admin', 'AdminController@show');
+Route::post('/login', 'AdminController@login');
 
 // i18n system
 Route::get('/language.json', 'LocaleController@getJSON')->name('localejson');

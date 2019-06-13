@@ -1,5 +1,5 @@
 <template>
-    <div class="linkinput" v-bind:class="{ created: createdTick }">
+    <div class="input">
         <input type="text" :placeholder="this.$lang.get('link.form.placeholder')" v-model="url" @keyup.enter="submitLink" autofocus="on"/>
         <p class="tooltip" v-bind:class="{ hidden: !tooltip }">{{ notice }}<br v-if="created"/>{{ deletenotice }}</p>
     </div>
@@ -23,6 +23,11 @@ export default {
         this.debouncedResetForm = _.debounce(this.resetForm, 10000);
     },
 
+
+    mounted() {
+        $('.linkinput > input').focus();
+    },
+
     methods: {
         submitLink() {
             axios.post('/link', {
@@ -35,6 +40,9 @@ export default {
                 this.notice = this.$lang.get('link.form.created');
                 this.deletenotice = this.$lang.get('link.form.deletelink', {mgmtlink: res.data.deletelink});
                 this.debouncedResetForm();
+            }).catch(res => {
+                this.tooltip = true;
+                this.notice = this.$lang.get('link.form.error');
             });
 
         },
@@ -52,6 +60,11 @@ export default {
 
     watch: {
         url() {
+            if (this.tooltiplock) return;
+            this.tooltip = false;
+            this.debouncedShowTooltip();
+        },
+        reason() {
             if (this.tooltiplock) return;
             this.tooltip = false;
             this.debouncedShowTooltip();

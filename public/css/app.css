@@ -82,9 +82,17 @@ body.darkbg {
   color: #ebebeb;
 }
 
-body.darkbg .linkinput > input[type=text] {
+body.darkbg .input > input[type=text] {
   color: #ebebeb;
   text-shadow: #444444 0 0 2px;
+}
+
+a {
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .box {
@@ -104,6 +112,16 @@ body.darkbg .linkinput > input[type=text] {
           transform: translate(-50%, -50%);
 }
 
+.box.long {
+  display: contents;
+}
+
+@media (max-width: 600px) {
+  .box {
+    width: 100%;
+  }
+}
+
 .down {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -113,14 +131,14 @@ body.darkbg .linkinput > input[type=text] {
           align-items: center;
   text-align: center;
   margin: 0;
-  position: absolute;
+  position: fixed;
   top: 95%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
-.linkinput > input[type=text] {
+.input > input[type=text] {
   text-align: center;
   width: 100%;
   background: transparent;
@@ -131,12 +149,14 @@ body.darkbg .linkinput > input[type=text] {
   text-shadow: #dddcdc 0 0 2px;
 }
 
-.linkinput > input[type=text]:focus {
+.input > input[type=text]:focus {
   outline: none;
 }
 
 .title {
-  width: 15%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin: auto;
   font-size: 1.5em;
   border-bottom: 0.025em solid #747474;
@@ -175,5 +195,50 @@ footer > .item {
   color: inherit;
   -webkit-transition: color 1.5s;
   transition: color 1.5s;
+}
+
+.report {
+  padding-bottom: 0.5em;
+  border-bottom: 0.025em solid #747474;
+  width: 25%;
+  margin: auto;
+}
+
+.report .header {
+  height: 1.5em;
+}
+
+.report .header .link {
+  float: left;
+  font-size: 1.25em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.report .header .actions {
+  float: right;
+}
+
+.report .header .actions a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.report .header .actions a.delete {
+  color: red;
+}
+
+.report .reasons {
+  height: 2.5em;
+  overflow: hidden;
+  -webkit-transition: height 2.5s;
+  transition: height 2.5s;
+}
+
+.report .reasons:hover {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 

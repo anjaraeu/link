@@ -1,0 +1,40 @@
+## Mentions légales
+
+<Nom> est un service permettant de raccourcir des liens, il est hébergé par <Adresse (vous)> grâce à <Hébergeur (nom complet, adresse)>.
+
+## Conditions d'utilisation
+
+<Nom> (çi-après "nous", "<Nom court>") fournit un service de raccourcissement de liens, toute utilisation de ce service implique l'acceptation de ces conditions d'utilisation.
+
+### Utilisation du service
+
+<Nom court> vise à être le plus utilisable, cependant les liens cible ne peuvent amener à :
+
+- Des contenus violents, abusifs, menaçants, illégaux, obscène, incitant à la haine, visant une personne sous forme d'harcèlement.
+- Des contenus visant à usurper l'identité d'une tierce personne.
+- Des contenus confidentiels (d'entreprises privées et/ou publiques, de gouvernements, etc...)
+- Des contenus visant à saturer la plateforme d'éléments inutiles ("spam") ou la répétition de mise en ligne de fichiers identiques.
+- Des contenus visant à infecter ou endommager les utilisateurs qui vont les utiliser ou l'infrastructure d'Anjara
+- Des contenus ne respectant pas les droits à la propriété intellectuelle ("copyright") d'un tiers.
+
+Nous nous réservons ainsi le droit de supprimer, copier, modifier et lire tout fichier afin de répondre à une procédure judiciaire ou de mettre en application ces conditions. Les utilisateurs constatant ces liens peuvent signaler ces liens via le système prévu à cet effet.
+
+L'accord de licence AGPLv3 s'applique à ce site Internet, le code source est disponible. Aucune garantie de résultat n'est présente même si nous faisons de notre mieux.
+
+```Plaintext
+AnjaraLink is a link shortening website.
+Copyright © 2019 Anjara - Link contributors
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see https://www.gnu.org/licenses/.
+```

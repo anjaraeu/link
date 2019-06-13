@@ -17,7 +17,7 @@
 </head>
 <body>
     <div id="app">
-        <main class="box">
+        <main class="box @yield('mainclass')">
             <noscript>
                 <p>{{ __('layout.js.tooltip') }}</p>
             </noscript>
@@ -25,7 +25,7 @@
         </main>
         <footer class="down">
             <a class="item" href="{{ url('legal') }}">{{ __('layout.legal') }}</a>
-            <a class="item" href="{{ url('report') }}">{{ __('layout.report') }}</a>
+            <a class="item" href="{{ url('report/create') }}">{{ __('layout.report') }}</a>
             <dark-button v-on:change-theme="switchTheme"></dark-button>
         </footer>
     </div>

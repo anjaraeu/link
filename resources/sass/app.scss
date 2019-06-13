@@ -11,10 +11,18 @@ body {
 body.darkbg {
     background-color: #2a2a2a;
     color: #ebebeb;
-    .linkinput > input[type=text] {
+    .input > input[type=text] {
         color: #ebebeb;
         text-shadow: #444444 0 0 2px;
     }
+}
+
+a {
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
 }
 
 .box {
@@ -30,19 +38,29 @@ body.darkbg {
     transform: translate(-50%, -50%);
 }
 
+.box.long {
+    display: contents;
+}
+
+@media (max-width:600px) {
+    .box {
+        width: 100%;
+    }
+}
+
 .down {
     justify-content: center;
     align-items: center;
     text-align: center;
     margin: 0;
-    position: absolute;
+    position: fixed;
     top: 95%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
-.linkinput > input[type=text] {
+.input > input[type=text] {
     text-align: center;
     width: 100%;
     background: transparent;
@@ -54,12 +72,12 @@ body.darkbg {
     text-shadow: #dddcdc 0 0 2px;
 }
 
-.linkinput > input[type=text]:focus {
+.input > input[type=text]:focus {
     outline: none;
 }
 
 .title {
-    width: 15%;
+    width: fit-content;
     margin: auto;
     font-size: 1.5em;
     border-bottom: 0.025em solid #747474;
@@ -96,4 +114,37 @@ footer > .item {
 .tooltip {
     color: inherit;
     transition: color 1.5s;
+}
+
+.report {
+    padding-bottom: 0.5em;
+    border-bottom: 0.025em solid #747474;
+    width: 25%;
+    margin: auto;
+    .header {
+        height: 1.5em;
+        .link {
+            float: left;
+            font-size: 1.25em;
+            width: fit-content;
+        }
+        .actions {
+            float: right;
+            a {
+                cursor: pointer;
+                text-decoration: none;
+            }
+            a.delete {
+                color: red;
+            }
+        }
+    }
+    .reasons {
+        height: 2.5em;
+        overflow: hidden;
+        transition: height 2.5s;
+    }
+    .reasons:hover {
+        height: fit-content;
+    }
 }
