@@ -2,21 +2,11 @@
 
 return [
 
-    'menu' => [
-        'privacy' => 'Privacy',
-        'legal' => 'Legal'
-    ],
-
-    'guest' => [
-        'login' => 'Login',
-        'register' => 'Register'
-    ],
-
-    'user' => [
-        'profile' => 'My profile',
-        'dashboard' => 'Dashboard',
-        'oauth' => 'OAuth Apps',
-        'logout' => 'Logout'
+    'legal' => 'Legal / ToS',
+    'report' => 'Report a link',
+    'theme' => [
+        'dark' => 'Dark theme',
+        'light' => 'Light theme'
     ],
 
     'js' => [
