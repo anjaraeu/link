@@ -3,11 +3,9 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Console\DetectsApplicationNamespace;
 
 class ScaffoldAuth extends Command
 {
-    use DetectsApplicationNamespace;
 
     /**
      * The name and signature of the console command.
@@ -51,7 +49,7 @@ class ScaffoldAuth extends Command
 
         $this->exportViews();
 
-        if (! $this->option('views')) {
+        if (!$this->option('views')) {
             file_put_contents(
                 app_path('Http/Controllers/HomeController.php'),
                 $this->compileControllerStub()
@@ -74,11 +72,11 @@ class ScaffoldAuth extends Command
      */
     protected function createDirectories()
     {
-        if (! is_dir($directory = $this->getViewPath('layouts'))) {
+        if (!is_dir($directory = $this->getViewPath('layouts'))) {
             mkdir($directory, 0755, true);
         }
 
-        if (! is_dir($directory = $this->getViewPath('auth/passwords'))) {
+        if (!is_dir($directory = $this->getViewPath('auth/passwords'))) {
             mkdir($directory, 0755, true);
         }
     }
@@ -91,14 +89,14 @@ class ScaffoldAuth extends Command
     protected function exportViews()
     {
         foreach ($this->views as $key => $value) {
-            if (file_exists($view = $this->getViewPath($value)) && ! $this->option('force')) {
-                if (! $this->confirm("The [{$value}] view already exists. Do you want to replace it?")) {
+            if (file_exists($view = $this->getViewPath($value)) && !$this->option('force')) {
+                if (!$this->confirm("The [{$value}] view already exists. Do you want to replace it?")) {
                     continue;
                 }
             }
 
             copy(
-                resource_path('stubs/views/'.$key),
+                resource_path('stubs/views/' . $key),
                 $view
             );
         }
@@ -113,7 +111,7 @@ class ScaffoldAuth extends Command
     {
         return str_replace(
             '{{namespace}}',
-            $this->getAppNamespace(),
+            $this->getLaravel()->getAppNamespace(),
             file_get_contents(resource_path('stubs/controllers/HomeController.stub'))
         );
     }

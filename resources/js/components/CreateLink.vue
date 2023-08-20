@@ -1,7 +1,15 @@
 <template>
     <div class="input">
-        <input type="text" :placeholder="this.$lang.get('link.form.placeholder')" v-model="url" @keyup.enter="submitLink" autofocus="on"/>
-        <p class="tooltip" v-bind:class="{ hidden: !tooltip }">{{ notice }}<br v-if="created"/>{{ deletenotice }}</p>
+        <input
+            type="text"
+            :placeholder="this.$lang.get('link.form.placeholder')"
+            v-model="url"
+            @keyup.enter="submitLink"
+            autofocus="on"
+        />
+        <p class="tooltip" v-bind:class="{ hidden: !tooltip }">
+            {{ notice }}<br v-if="deletenotice" />{{ deletenotice }}
+        </p>
     </div>
 </template>
 
@@ -9,13 +17,13 @@
 export default {
     data() {
         return {
-            url: '',
+            url: "",
             tooltip: false,
             tooltiplock: false,
-            notice: this.$lang.get('link.form.tooltip'),
+            notice: this.$lang.get("link.form.tooltip"),
             created: false,
-            deletenotice: ''
-        }
+            deletenotice: ""
+        };
     },
 
     created() {
@@ -23,28 +31,34 @@ export default {
         this.debouncedResetForm = _.debounce(this.resetForm, 10000);
     },
 
-
     mounted() {
-        $('.linkinput > input').focus();
+        $(".linkinput > input").focus();
     },
 
     methods: {
         submitLink() {
-            axios.post('/link', {
-                link: this.url
-            }).then(res => {
-                this.url = res.data.link;
-                this.created = true;
-                this.tooltiplock = true;
-                this.tooltip = true;
-                this.notice = this.$lang.get('link.form.created');
-                this.deletenotice = this.$lang.get('link.form.deletelink', {mgmtlink: res.data.deletelink});
-                this.debouncedResetForm();
-            }).catch(res => {
-                this.tooltip = true;
-                this.notice = this.$lang.get('link.form.error');
-            });
-
+            if (this.created) return;
+            axios
+                .post("/link", {
+                    link: this.url
+                })
+                .then(res => {
+                    this.url = res.data.link;
+                    this.tooltiplock = true;
+                    this.tooltip = true;
+                    this.notice = this.$lang.get("link.form.created");
+                    this.deletenotice = this.$lang.get("link.form.deletelink", {
+                        mgmtlink: res.data.deletelink
+                    });
+                    this.debouncedResetForm();
+                    this.$nextTick(() => {
+                        this.created = true;
+                    });
+                })
+                .catch(res => {
+                    this.tooltip = true;
+                    this.notice = this.$lang.get("link.form.error");
+                });
         },
         showTooltip() {
             this.tooltip = true;
@@ -53,22 +67,18 @@ export default {
             this.tooltip = false;
             this.tooltiplock = false;
             this.created = false;
-            this.deletenotice = '';
-            this.notice = this.$lang.get('link.form.tooltip');
+            this.deletenotice = "";
+            this.notice = this.$lang.get("link.form.tooltip");
         }
     },
 
     watch: {
         url() {
-            if (this.tooltiplock) return;
-            this.tooltip = false;
-            this.debouncedShowTooltip();
-        },
-        reason() {
+            this.created = false;
             if (this.tooltiplock) return;
             this.tooltip = false;
             this.debouncedShowTooltip();
         }
     }
-}
+};
 </script>
